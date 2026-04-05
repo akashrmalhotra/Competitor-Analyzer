@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0b;
+  --surface: #141416;
+  --border: #2a2a2e;
+  --accent: #6366f1;
+  --accent-dim: #4f46e5;
+  --muted: #71717a;
+}
+
+body {
+  @apply min-h-screen antialiased text-zinc-100;
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1e1b4b 0%, var(--bg) 55%);
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-break {
+    break-inside: avoid;
+  }
+}
